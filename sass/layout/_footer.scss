@@ -1,0 +1,42 @@
+.footer {
+
+    padding: 1rem 1.6rem;
+    margin: 0 auto;
+    background-color: $color-primary;
+    color: $color-white;
+
+    @include respond(phone) {
+        max-width: unset;
+    }
+
+    &__inner {
+        margin-top: 1.6rem;
+        padding-left: 20px;
+    }
+
+    &__information {
+        @include d-flex-sb;
+        gap: 8px;
+    }
+
+    &__information p {
+        font-size: 1.2rem;
+    }
+
+    &__link-box {
+        text-align: right;
+    }
+
+    &__socials-box {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 10px;
+        cursor: pointer;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+}

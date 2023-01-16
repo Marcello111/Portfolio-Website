@@ -1,0 +1,16 @@
+.container {
+    max-width: 114rem !important;
+    margin: 0 auto;
+}
+
+.hide-for-mobile {
+    @include respond(phone) {
+        display: none !important;
+    }
+}
+
+.hide-for-desktop {
+    @include respond(tab-land) {
+        display: none !important;
+    }
+}
