@@ -1,0 +1,65 @@
+.section-skills {
+
+    margin: 12.8rem auto 3.2rem;
+   
+    @include respond(phone) {
+        width: 100%;
+        padding: 0;
+        margin-top: 3.2rem;
+    }
+
+    & .heading-secondary {
+        padding-left: 2.3rem !important;
+        margin-bottom: -17.6rem;
+    
+        @include respond(tab-land) {
+            margin-bottom: -9.6rem;
+            width: 90%;
+        }
+        @include respond(tab-port) {
+            margin-bottom: -3.2rem;
+        }
+        @include respond(phone) {
+            margin-bottom: -3.2rem;
+        }
+    }
+}
+
+.wave {
+    display: block;
+}
+
+.skills {
+    padding: 0 1.6rem;
+    background-color: rgba(106,143,148,0.5);
+
+    @include respond(phone) {
+        display: block;
+    }
+
+    &__inner {
+        max-width: 707px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 2.4rem;
+        grid-row-gap: 2.4rem;
+        padding: 0 1.6rem;
+
+        @include respond(tab-port) {
+            width: unset;
+        }
+
+        @include respond(phone) {
+            display: block;
+            width: unset;
+            padding: 1.2rem 2.4rem;
+        }
+
+        @include respond(phone-small) {
+            padding: .2rem;
+        }
+
+    }
+}

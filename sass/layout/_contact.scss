@@ -1,0 +1,81 @@
+.section-contact {
+    width: 90%;
+    margin: 4.8rem auto;
+    padding: 0 2.4rem;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3.2rem;
+    grid-row-gap: 0;
+
+    @include respond(phone) {
+        display: unset;
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        margin-top: 2.4rem;
+
+        @include respond(tab-port) {
+            margin-top: unset;
+        }
+
+    }
+
+    &__details {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    &__icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+    &__link:link, 
+    &__link:visited {
+        color: $color-primary;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        transition: all 0.2s;
+    }
+
+    &__link:hover {
+        color: $color-accent;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    &__img-box {
+        padding: 0 4.8rem 3.2rem;
+
+        @include respond(tab-port) {
+            padding: 0 1.2rem;
+        }
+
+        @include respond(phone) {
+            padding: 2.4rem 3.2rem 0;
+            text-align: center;
+        }
+    
+    }
+
+    &__img {
+        max-width: 100%;
+
+        @include respond(phone) {
+            width: 75%;
+        }
+    }
+}
